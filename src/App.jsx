@@ -1,12 +1,15 @@
-import Question from "@pages/Question";
-import "./App.css";
+import Question from '@pages/Question';
+import './App.css';
+import Sidebar from '@layout/Sidebar';
 
 function App() {
   return (
-    <>
-      <h1>Ai_Interpreting_Question</h1>
-      <Question />
-    </>
+    <div className="wrapper">
+      <div className="l-wrapper">
+        <Sidebar />
+        <Question />
+      </div>
+    </div>
   );
 }
 

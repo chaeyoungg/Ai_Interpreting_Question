@@ -1,6 +1,7 @@
 import useAxiosAi from '@hooks/useAxiosAi.mjs';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import './Question.css';
 
 function Question() {
   const { register, handleSubmit } = useForm();
@@ -21,7 +22,8 @@ function Question() {
   };
 
   return (
-    <div>
+    <div className="contents-wrap">
+      <h1 className="contents-title">Ai_Interpreting_Question</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <textarea
           id="passage"

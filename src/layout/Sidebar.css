@@ -1,0 +1,13 @@
+.side-wrapper {
+  margin-right: auto;
+  box-shadow: inset 0 0 10px red;
+  min-width: 200px;
+  flex-shrink: 0;
+}
+
+.side-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: none;
+}
