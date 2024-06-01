@@ -2,6 +2,7 @@ import useAxiosAi from '@hooks/useAxiosAi.mjs';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './Question.css';
+import Sidebar from '@layout/Sidebar';
 
 function Question() {
   const { register, handleSubmit } = useForm();
@@ -22,6 +23,8 @@ function Question() {
   };
 
   return (
+    // <div className="wrapper">
+    //   <div className="l-wrapper">
     <div className="contents-wrap">
       <h1 className="contents-title">Ai_Interpreting_Question</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -49,6 +52,8 @@ function Question() {
         {/* <textarea id="result" value={result}></textarea> */}
       </form>
     </div>
+    //   </div>
+    // </div>
   );
 }
 
