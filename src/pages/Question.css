@@ -1,4 +1,63 @@
 .contents-wrap {
   width: 100%;
-  box-shadow: inset 0 0 10px greenyellow;
+  padding: 15px;
+}
+
+.contents-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.passage-label {
+  font-size: 12px;
+}
+
+.passage {
+  resize: none;
+  width: 400px;
+  height: 200px;
+  margin: 5px 0 20px 0;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+.passage::-webkit-scrollbar {
+  width: 10px;
+}
+.passage::-webkit-scrollbar-thumb {
+  background-color: powderblue;
+  border-radius: 5px;
+}
+
+.question-label {
+  font-size: 12px;
+}
+
+.question {
+  width: 400px;
+  margin: 5px 5px 0 0;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+.submit {
+  background-color: #d9d9d9;
+  border: none;
+  border-radius: 5px;
+}
+
+.content-hr {
+  border: 0.5px solid #d9d9d9;
+  margin: 20px 0;
+}
+.result-label {
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 2px;
+  padding: 2px 5px;
+  width: fit-content;
+  margin-bottom: 5px;
+}
+
+.result {
+  font-size: 14px;
 }
