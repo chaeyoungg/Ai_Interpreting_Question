@@ -1,5 +1,6 @@
 import Sidebar from '@layout/Sidebar';
 import Question from '@pages/Question';
+import Wiki from '@pages/Wiki';
 import { createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: '/question',
         element: <Question />,
+      },
+      {
+        path: '/wiki',
+        element: <Wiki />,
       },
     ],
   },

@@ -8,11 +8,15 @@ function Sidebar() {
         <div className="side-wrapper">
           <Link className="side-title">
             <img className="icon-image" src="/icon.svg" alt="" />
-            <h2 className="icon-title">Ai 문장해석</h2>
+            <h2 className="icon-title">Ai 프로그램</h2>
           </Link>
           <ul className="side-list">
-            <li className="list-items">긴 글에서 정보 추출하기AI</li>
-            <li className="list-items">ai - 2</li>
+            <Link to="/question" className="list-items">
+              긴 글에서 정보 추출하기AI
+            </Link>
+            <Link to="/wiki" className="list-items">
+              위키 백과에서 질문하기AI
+            </Link>
             <li className="list-items">ai - 3</li>
             <li className="list-items">ai - 4</li>
           </ul>
