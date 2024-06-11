@@ -26,6 +26,14 @@ function Question() {
     //   <div className="l-wrapper">
     <div className="contents-wrap">
       <h1 className="contents-title">Ai_Interpreting_Question</h1>
+      <details className="tip">
+        <summary className="tip-title">사용 방법</summary>
+        <div className="tip-content">
+          해석을 원하는 글을 복사하여 [긴 글] 에 붙여넣고 긴 글에서 얻고 싶은
+          정보를 [얻고 싶은 정보] 에 입력하여 '해석하기' 버튼을 누르면 [결과
+          보기] 에 AI가 해석한 결과를 출력합니다.
+        </div>
+      </details>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label className="passage-label" htmlFor="passage">
           [ 긴 글 ]
