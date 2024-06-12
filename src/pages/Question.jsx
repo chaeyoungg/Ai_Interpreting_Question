@@ -29,9 +29,13 @@ function Question() {
       <details className="tip">
         <summary className="tip-title">사용 방법</summary>
         <div className="tip-content">
-          해석을 원하는 글을 복사하여 [긴 글] 에 붙여넣고 긴 글에서 얻고 싶은
-          정보를 [얻고 싶은 정보] 에 입력하여 '해석하기' 버튼을 누르면 [결과
-          보기] 에 AI가 해석한 결과를 출력합니다.
+          해석을 원하는 글을 복사하여{' '}
+          <span className="spotlight-text">[긴 글]</span> 에 붙여넣고 긴 글에서
+          얻고 싶은 정보를{' '}
+          <span className="spotlight-text">[얻고 싶은 정보]</span> 에 입력하여{' '}
+          <span className="spotlight-text yellow">'해석하기'</span> 버튼을
+          누르면 <span className="spotlight-text">[결과 보기]</span> 에 AI가
+          해석한 결과를 출력합니다.
         </div>
       </details>
       <form onSubmit={handleSubmit(onSubmit)}>

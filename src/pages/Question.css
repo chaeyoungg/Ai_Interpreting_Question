@@ -24,7 +24,8 @@
   cursor: pointer;
   position: relative;
   padding-left: 16px;
-  box-shadow: inset 0 0 10px red;
+  width: fit-content;
+  font-weight: bold;
 }
 .tip-title::before {
   position: absolute;
@@ -32,7 +33,6 @@
   background: url('/tip.svg');
   background-size: cover;
   inset: 0;
-  box-shadow: inset 0 0 10px green;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -42,6 +42,12 @@
 
 .tip-content {
   margin: 3px 0 3px 0;
+}
+.spotlight-text {
+  background: linear-gradient(to top, #d6fffe 50%, transparent 100%);
+}
+.spotlight-text.yellow {
+  background: linear-gradient(to top, #ffffbb 50%, transparent 100%);
 }
 .passage-label {
   font-size: 12px;

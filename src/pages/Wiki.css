@@ -1,3 +1,12 @@
+/* a 태그 초기화 */
+a:link {
+  text-decoration: none;
+}
+a:active,
+a:visited {
+  color: black;
+}
+
 .contents-wrap {
   width: 100%;
   padding: 15px;
@@ -59,5 +68,13 @@
 }
 
 .result {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.result-link {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   font-size: 14px;
 }
