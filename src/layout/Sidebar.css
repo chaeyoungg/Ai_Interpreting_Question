@@ -35,43 +35,44 @@
 .icon-title {
   font-weight: bold;
   font-size: 18px;
-  color: black;
 }
-/* .icon-title:active {
-  color: black;
-}
-.icon-title:visited {
-  color: black;
-  text-decoration: none;
-}
-.icon-title:hover {
-  color: black;
-  text-decoration: none;
-} */
 
 .side-list {
   width: 100%;
-  padding-left: 10px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 5px;
   list-style-type: none;
   margin: 0 auto;
 }
 .list-items {
   align-items: center;
-  width: fit-content;
+  width: 100%;
+  padding: 20px 10px;
+  box-sizing: border-box;
 }
 .list-items:hover {
   transition: all 0.3s;
   cursor: pointer;
+  background-color: #d9d9d9;
 }
-.list-items:hover:before {
-  display: inline-block;
-  content: '';
-  border-radius: 0px 50px 50px 0px / 0px 25px 25px 0px;
-  width: 10px;
-  height: 10px;
-  background-color: powderblue;
-  margin-right: 3px;
+
+/*반응형*/
+@media (max-width: 785px) {
+  .l-wrapper {
+    flex-direction: column;
+  }
+  .side-wrapper {
+    max-width: 100%;
+  }
+  .side-title {
+    margin-bottom: 0;
+  }
+  .side-list {
+    min-width: 150px;
+    overflow: hidden;
+    flex-direction: row;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
 }
