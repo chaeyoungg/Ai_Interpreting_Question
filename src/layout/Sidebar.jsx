@@ -17,8 +17,9 @@ function Sidebar() {
             <Link to="/wiki" className="list-items">
               위키 백과에서 질문하기AI
             </Link>
-            <li className="list-items">ai - 3</li>
-            <li className="list-items">ai - 4</li>
+            <Link to="/law" className="list-items">
+              법률 관련 질문하기AI
+            </Link>
           </ul>
         </div>
         <Outlet />
