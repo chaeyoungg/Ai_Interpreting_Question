@@ -4,7 +4,11 @@ import { useForm } from 'react-hook-form';
 import './Wiki.css';
 
 function Wiki() {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const axios = useAxiosAi();
   const [result, setResult] = useState('');
   const [url, setUrl] = useState([]);
@@ -63,38 +67,21 @@ function Wiki() {
         <input
           className="question"
           id="question"
-          defaultValue="대한민국 국회의원의 임기는?"
+          defaultValue="대한민국의 대표 국화는?"
           {...register('argument.question', {
-            required: '추출하고 싶은 글 원문을 입력하세요.',
+            required: 'Wiki 백과에서 찾고 싶은 정보에 대한 질문을 입력하세요.',
           })}
         />
-        {/* <label className="passage-label" htmlFor="question">
-          [ 얻고 싶은 정보 ]
-        </label>
-        <br />
-        <input
-          type="text"
-          className="question"
-          id="question"
-          defaultValue="베토벤의 출생일"
-          {...register('argument.question', {
-            required: '추출하고 싶은 정보를 입력하세요.',
-          })}
-        /> */}
-
         <button className="submit" type="submit">
           해석하기
         </button>
+        {errors?.argument?.question && (
+          <p className="error-message">{errors.argument.question.message}</p>
+        )}
 
         <hr className="content-hr" />
         <h3 className="result-label">[ 결과 보기 ]</h3>
         <p className="result">{result?.answer}</p>
-        {/* <div>
-          {result?.url?.map((data, index) => (
-            <p key={index}>{data}</p>
-          ))}
-        </div> */}
-
         <h3 className="result-label">[ 참고 위키 링크 ]</h3>
         <div className="result-link">{url}</div>
       </form>

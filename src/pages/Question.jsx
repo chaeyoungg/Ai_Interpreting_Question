@@ -4,7 +4,11 @@ import { useForm } from 'react-hook-form';
 import './Question.css';
 
 function Question() {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const axios = useAxiosAi();
   const [result, setResult] = useState('');
 
@@ -52,11 +56,13 @@ function Question() {
             required: '추출하고 싶은 글 원문을 입력하세요.',
           })}
         />
+        {errors?.argument?.passage && (
+          <p className="error-message">{errors.argument.passage.message}</p>
+        )}
         <br />
-        <label className="passage-label" htmlFor="question">
+        <p className="question-label" htmlFor="question">
           [ 얻고 싶은 정보 ]
-        </label>
-        <br />
+        </p>
         <input
           type="text"
           className="question"
@@ -70,6 +76,9 @@ function Question() {
         <button className="submit" type="submit">
           해석하기
         </button>
+        {errors?.argument?.question && (
+          <p className="error-message">{errors.argument.question.message}</p>
+        )}
 
         <hr className="content-hr" />
         <h3 className="result-label">[ 결과 보기 ]</h3>
