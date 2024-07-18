@@ -12,4 +12,8 @@ export default defineConfig({
       { find: '@layout', replacement: '/src/layout' },
     ],
   },
+  base: '/Ai_Interpreting_Question/',
+  // build: {
+  //   outDir: '../spring-folder/src/main/resources/static',
+  // },
 });
